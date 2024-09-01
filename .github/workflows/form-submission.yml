@@ -1,0 +1,15 @@
+name: Form Submission
+
+on:
+  repository_dispatch:
+    types: [form-submission]
+
+jobs:
+  handle-form-submission:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Log form data
+        run: echo "Form Data: ${{ toJson(github.event.client_payload) }}"
