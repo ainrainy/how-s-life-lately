@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -56,10 +56,10 @@
             cursor: pointer;
         }
 
-            button:hover {
-                background-color: #808080;
-            }
-    </style>[]
+        button:hover {
+            background-color: #808080;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -67,21 +67,21 @@
     </header>
     <div class="container">
         <form id="Howslife-form" 
-            action="https://formspree.io/f/xdknbqgb" 
-            method="POST">
+              action="https://formspree.io/f/mdknbqpp" 
+              method="POST">
         
             <!-- First Page Questions -->
             <div class="question">
                 <label for="name">What is your name?</label>
-                <input type="text" id="name" name="name">
+                <input type="text" id="name" name="name" required>
             </div>
             <div class="question">
                 <label for="age">Your age?</label>
-                <input type="number" id="age" name="age">
+                <input type="number" id="age" name="age" required>
             </div>
             <div class="question">
                 <label for="status">Your status?</label>
-                <select id="status" name="status">
+                <select id="status" name="status" required>
                     <option value="single">Single as fck</option>
                     <option value="partner">Have a partner</option>
                 </select>
@@ -105,12 +105,12 @@
                 <input type="text" id="motivation" name="motivation">
             </div>
             <div class="question">
-                <label for="coding-partner">Do you feel excited lately?</label>
+                <label for="excited">Do you feel excited lately?</label>
                 <input type="text" id="excited" name="excited">
             </div>
             <div class="question">
                 <label for="have-fun">Do you have fun lately?</label>
-                <select id="have-fun" name="have-fun">
+                <select id="have-fun" name="have-fun" required>
                     <option value="yes">I'm doing just fine</option>
                     <option value="no">I'm not doing well</option>
                 </select>
@@ -120,15 +120,8 @@
                 <input type="text" id="future" name="future">
             </div>
 
-        <button type="submit">Send</button>
-       </form>
+            <button type="submit">Send</button>
+        </form>
     </div>
-
-    <script>
-        document.getElementById('Howslife-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            window.location.href = 'THANKS%20LOL.html';
-        });
-    </script>
 </body>
 </html>
